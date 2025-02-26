@@ -1,6 +1,13 @@
 import { useState, useEffect, useMemo } from 'react';
-import { VirtualizationConfig } from '../types';
+// import { VirtualizationConfig } from '../types';
 
+interface VirtualizationConfig {
+    totalItems: number;
+    itemHeight: number;
+    containerHeight: number;
+    overscan?: number;
+  }
+  
 export const useVirtualization = ({
   totalItems,
   itemHeight,
